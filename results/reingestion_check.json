@@ -1,0 +1,9 @@
+{
+  "strategy_tested": "B",
+  "initial_chunk_count": 286,
+  "count_after_full_reingest": 286,
+  "duplicates_created": 0,
+  "idempotent_verified": true,
+  "obsolete_cleanup_tested": true,
+  "count_during_shrunk_doc_simulation": 188
+}

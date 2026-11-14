@@ -1,0 +1,101 @@
+{
+  "total_documents": 4,
+  "total_physical_pages": 73,
+  "total_valid_content_pages": 59,
+  "total_normalized_characters": 135305,
+  "page_counting_rule": "Count physical PDF pages containing substantive technical specification text after Unicode NFKC normalization and running header/footer removal. Exclude pages containing only Table of Contents, only Bibliographic References, or only Acknowledgements / Authors' Addresses. Strip trailing TOC lines on Page 3 prior to Section 1. Introduction.",
+  "excluded_pages_by_document": {
+    "rfc8693": [
+      {
+        "page": 2,
+        "reason": "table_of_contents",
+        "char_count": 887,
+        "preview": "Table of Contents  1 . Introduction  1.1 . Delegation vs. Impersonation Semantics  1.2 . Requirements Notation and Conve"
+      },
+      {
+        "page": 21,
+        "reason": "references_only",
+        "char_count": 2486,
+        "preview": ", , , , Richer, J., Ed. \"OAuth 2.0 Token Introspection\" RFC 7662 DOI 10.17487/RFC7662 October 2015, . < https://www.rfc-"
+      },
+      {
+        "page": 27,
+        "reason": "acknowledgements_or_authors_only",
+        "char_count": 835,
+        "preview": "The following individuals contributed ideas, feedback, and wording to this specification: Caleb , , , , , , Baker Vittor"
+      }
+    ],
+    "rfc8725": [
+      {
+        "page": 2,
+        "reason": "table_of_contents",
+        "char_count": 1023,
+        "preview": "Table of Contents  1 . Introduction  1.1 . Target Audience  1.2 . Conventions Used in this Document  2 . Threats and Vul"
+      },
+      {
+        "page": 11,
+        "reason": "references_only",
+        "char_count": 2295,
+        "preview": "6. References  6.1. Normative References  [nist-sp-800-56a-r3] , Barker, E., Chen, L., Roginsky, A., Vassilev, A., and R"
+      },
+      {
+        "page": 12,
+        "reason": "references_only",
+        "char_count": 2645,
+        "preview": "[Alawatugoda] , Alawatugoda, J., Stebila, D., and C. Boyd \"Protecting Encrypted Cookies from , Compression Side-Channel "
+      },
+      {
+        "page": 13,
+        "reason": "acknowledgements_or_authors_only",
+        "char_count": 728,
+        "preview": "Acknowledgements  Thanks to for bringing the \"ECDH-ES\" invalid point attack to the attention of JWE Antonio Sanso and JW"
+      }
+    ],
+    "rfc9068": [
+      {
+        "page": 2,
+        "reason": "table_of_contents",
+        "char_count": 779,
+        "preview": "Table of Contents  1 . Introduction  1.1 . Requirements Notation and Conventions  1.2 . Terminology  2 . JWT Access Toke"
+      },
+      {
+        "page": 13,
+        "reason": "references_only",
+        "char_count": 2353,
+        "preview": "8. References  8.1. Normative References  [OpenID.Core] , , , , and , Sakimura, N. Bradley, J. Jones, M. de Medeiros, B."
+      },
+      {
+        "page": 14,
+        "reason": "references_only",
+        "char_count": 2666,
+        "preview": "[RFC8693] , , , , and , Jones, M. Nadalin, A. Campbell, B., Ed. Bradley, J. C. Mortimore \"OAuth 2.0 , , , January 2020, "
+      },
+      {
+        "page": 15,
+        "reason": "acknowledgements_or_authors_only",
+        "char_count": 698,
+        "preview": ", , , , , , Dale Olds George Fletcher David Waite Michael Engan Mike Jones Hans Zandbelt Vladimir , , , , , Dzhuvinov Ma"
+      }
+    ],
+    "rfc9126": [
+      {
+        "page": 2,
+        "reason": "table_of_contents",
+        "char_count": 804,
+        "preview": "Table of Contents  1 . Introduction  1.1 . Introductory Example  1.2 . Conventions and Terminology  2 . Pushed Authoriza"
+      },
+      {
+        "page": 17,
+        "reason": "references_only",
+        "char_count": 2684,
+        "preview": "[RFC9101] , , and , Sakimura, N. Bradley, J. M. Jones \"The OAuth 2.0 Authorization , , Framework: JWT-Secured Authorizat"
+      },
+      {
+        "page": 18,
+        "reason": "references_only",
+        "char_count": 1338,
+        "preview": "[RFC8705] , , , and , Campbell, B. Bradley, J. Sakimura, N. T. Lodderstedt \"OAuth 2.0 Mutual- , , TLS Client Authenticat"
+      }
+    ]
+  }
+}

@@ -1,0 +1,272 @@
+[
+  {
+    "sample_id": "coh_01",
+    "document_id": "rfc8693",
+    "page": 4,
+    "anchor_char_offset": 1650,
+    "anchor_snippet": "y that makes the request to exchange tokens is considered the client in the context of the\ntoken exchange interaction. H",
+    "strategy_chunks": {
+      "A": {
+        "chunk_id": "rfc8693:p04:fixed:03",
+        "char_length": 500,
+        "section": "Section 1: Introduction",
+        "text": "quest to the token endpoint are defined by this specification. A token exchange response is a\nnormal OAuth 2.0 response from the token endpoint with a few additional parameters defined\nherein to provide information to the client.\n\nThe entity that makes the request to exchange tokens is considered the client in the context of the\ntoken exchange interaction. However, that does not restrict usage of this profile to traditional\nOAuth clients. An OAuth resource server, for example, might assume the r"
+      },
+      "B": {
+        "chunk_id": "rfc8693:p04:para:03",
+        "char_length": 617,
+        "section": "Section 1: Introduction",
+        "text": "The entity that makes the request to exchange tokens is considered the client in the context of the\ntoken exchange interaction. However, that does not restrict usage of this profile to traditional\nOAuth clients. An OAuth resource server, for example, might assume the role of the client during\ntoken exchange in order to trade an access token that it received in a protected resource request\nfor a new token that is appropriate to include in a call to a backend service. The new token might\nbe an access token that is more narrowly scoped for the downstream service or it could be an\nentirely different kind of token."
+      },
+      "C": {
+        "chunk_id": "rfc8693:p04:para:03",
+        "char_length": 617,
+        "section": "Section 1: Introduction",
+        "text": "The entity that makes the request to exchange tokens is considered the client in the context of the\ntoken exchange interaction. However, that does not restrict usage of this profile to traditional\nOAuth clients. An OAuth resource server, for example, might assume the role of the client during\ntoken exchange in order to trade an access token that it received in a protected resource request\nfor a new token that is appropriate to include in a call to a backend service. The new token might\nbe an access token that is more narrowly scoped for the downstream service or it could be an\nentirely different kind of token."
+      }
+    }
+  },
+  {
+    "sample_id": "coh_02",
+    "document_id": "rfc8693",
+    "page": 5,
+    "anchor_char_offset": 1692,
+    "anchor_snippet": "nderstood that while B may have delegated some of its rights to A, any actions taken\nare being taken by A representing B",
+    "strategy_chunks": {
+      "A": {
+        "chunk_id": "rfc8693:p05:fixed:03",
+        "char_length": 500,
+        "section": "Section 1: Introduction",
+        "text": "iction, whether via the contents of the token or an out-of-band mechanism.\n\nDelegation semantics are different than impersonation semantics, though the two are closely\nrelated. With delegation semantics, principal A still has its own identity separate from B, and it is\nexplicitly understood that while B may have delegated some of its rights to A, any actions taken\nare being taken by A representing B. In a sense, A is an agent for B.\n\nDelegation and impersonation are not inclusive of all situatio"
+      },
+      "B": {
+        "chunk_id": "rfc8693:p05:para:03",
+        "char_length": 533,
+        "section": "1.1. Delegation vs. Impersonation Semantics",
+        "text": "A's ability to impersonate B could be limited in scope or time, or even with a one-time-use\nrestriction, whether via the contents of the token or an out-of-band mechanism.\n\nDelegation semantics are different than impersonation semantics, though the two are closely\nrelated. With delegation semantics, principal A still has its own identity separate from B, and it is\nexplicitly understood that while B may have delegated some of its rights to A, any actions taken\nare being taken by A representing B. In a sense, A is an agent for B."
+      },
+      "C": {
+        "chunk_id": "rfc8693:p05:para:03",
+        "char_length": 533,
+        "section": "1.1. Delegation vs. Impersonation Semantics",
+        "text": "A's ability to impersonate B could be limited in scope or time, or even with a one-time-use\nrestriction, whether via the contents of the token or an out-of-band mechanism.\n\nDelegation semantics are different than impersonation semantics, though the two are closely\nrelated. With delegation semantics, principal A still has its own identity separate from B, and it is\nexplicitly understood that while B may have delegated some of its rights to A, any actions taken\nare being taken by A representing B. In a sense, A is an agent for B."
+      }
+    }
+  },
+  {
+    "sample_id": "coh_03",
+    "document_id": "rfc8693",
+    "page": 7,
+    "anchor_char_offset": 1523,
+    "anchor_snippet": "h a given\nauthorization server must be unique within that server to ensure that they are properly\ninterpreted as the int",
+    "strategy_chunks": {
+      "A": {
+        "chunk_id": "rfc8693:p07:fixed:03",
+        "char_length": 500,
+        "section": "Section 2: Token Exchange Request and Response",
+        "text": "ples of things that might [ OpenID.Core ]\nbe used as audience parameter values. However, audience values used with a given\nauthorization server must be unique within that server to ensure that they are properly\ninterpreted as the intended type of value. Multiple audience parameters may be used to\nindicate that the issued token is intended to be used at the multiple audiences listed. The\naudience and resource parameters may be used together to indicate multiple target\nservices with a mix of logic"
+      },
+      "B": {
+        "chunk_id": "rfc8693:p07:para:03",
+        "char_length": 447,
+        "section": "Section 2: Token Exchange Request and Response",
+        "text": "However, audience values used with a given\nauthorization server must be unique within that server to ensure that they are properly\ninterpreted as the intended type of value. Multiple audience parameters may be used to\nindicate that the issued token is intended to be used at the multiple audiences listed. The\naudience and resource parameters may be used together to indicate multiple target\nservices with a mix of logical names and resource URIs."
+      },
+      "C": {
+        "chunk_id": "rfc8693:p07:para:03",
+        "char_length": 447,
+        "section": "Section 2: Token Exchange Request and Response",
+        "text": "However, audience values used with a given\nauthorization server must be unique within that server to ensure that they are properly\ninterpreted as the intended type of value. Multiple audience parameters may be used to\nindicate that the issued token is intended to be used at the multiple audiences listed. The\naudience and resource parameters may be used together to indicate multiple target\nservices with a mix of logical names and resource URIs."
+      }
+    }
+  },
+  {
+    "sample_id": "coh_04",
+    "document_id": "rfc8725",
+    "page": 5,
+    "anchor_char_offset": 1091,
+    "anchor_snippet": "ecure Use of Elliptic Curve Encryption\n\nPer , several Javascript Object Signing and Encryption (JOSE) libraries fail to",
+    "strategy_chunks": {
+      "A": {
+        "chunk_id": "rfc8725:p05:fixed:02",
+        "char_length": 500,
+        "section": "Section 2: Threats and Vulnerabilities",
+        "text": "ion and for a [ Kelsey ] [ Alawatugoda ]\nspecific example of attacks on HTTP cookies.\n\nFor mitigations, see Section 3.6 .\n\n2.5. Insecure Use of Elliptic Curve Encryption\n\nPer , several Javascript Object Signing and Encryption (JOSE) libraries fail to validate their [ Sanso ]\ninputs correctly when performing elliptic curve key agreement (the \"ECDH-ES\" algorithm). An\nattacker that is able to send JWEs of its choosing that use invalid curve points and observe the\ncleartext outputs resulting from de"
+      },
+      "B": {
+        "chunk_id": "rfc8725:p05:para:03",
+        "char_length": 518,
+        "section": "2.5. Insecure Use of Elliptic Curve Encryption",
+        "text": "2.5. Insecure Use of Elliptic Curve Encryption\n\nPer , several Javascript Object Signing and Encryption (JOSE) libraries fail to validate their [ Sanso ]\ninputs correctly when performing elliptic curve key agreement (the \"ECDH-ES\" algorithm). An\nattacker that is able to send JWEs of its choosing that use invalid curve points and observe the\ncleartext outputs resulting from decryption with the invalid curve points can use this\nvulnerability to recover the recipient's private key.\n\nFor mitigations, see Section 3.4 ."
+      },
+      "C": {
+        "chunk_id": "rfc8725:p05:para:03",
+        "char_length": 518,
+        "section": "2.5. Insecure Use of Elliptic Curve Encryption",
+        "text": "2.5. Insecure Use of Elliptic Curve Encryption\n\nPer , several Javascript Object Signing and Encryption (JOSE) libraries fail to validate their [ Sanso ]\ninputs correctly when performing elliptic curve key agreement (the \"ECDH-ES\" algorithm). An\nattacker that is able to send JWEs of its choosing that use invalid curve points and observe the\ncleartext outputs resulting from decryption with the invalid curve points can use this\nvulnerability to recover the recipient's private key.\n\nFor mitigations, see Section 3.4 ."
+      }
+    }
+  },
+  {
+    "sample_id": "coh_05",
+    "document_id": "rfc8725",
+    "page": 7,
+    "anchor_char_offset": 1360,
+    "anchor_snippet": "es SHOULD NOT\ngenerate JWTs using \"none\" unless explicitly requested to do so by the caller. Similarly, JWT\nlibraries co",
+    "strategy_chunks": {
+      "A": {
+        "chunk_id": "rfc8725:p07:fixed:02",
+        "char_length": 499,
+        "section": "Section 3: Best Practices",
+        "text": "In such cases, the use of the \"none\" algorithm can be\nperfectly acceptable. The \"none\" algorithm should only be used when the JWT is\ncryptographically protected by other means. JWTs using \"none\" are often used in application\ncontexts in which the content is optionally signed; then, the URL-safe claims representation and\nprocessing can be the same in both the signed and unsigned cases. JWT libraries SHOULD NOT\ngenerate JWTs using \"none\" unless explicitly requested to do so by the caller. Similar"
+      },
+      "B": {
+        "chunk_id": "rfc8725:p07:para:03",
+        "char_length": 278,
+        "section": "3.2. Use Appropriate Algorithms",
+        "text": "JWT libraries SHOULD NOT\ngenerate JWTs using \"none\" unless explicitly requested to do so by the caller. Similarly, JWT\nlibraries consume JWTs using \"none\" unless explicitly requested by the caller. SHOULD NOT\n\nApplications follow these algorithm-specific recommendations: SHOULD"
+      },
+      "C": {
+        "chunk_id": "rfc8725:p07:para:03",
+        "char_length": 278,
+        "section": "3.2. Use Appropriate Algorithms",
+        "text": "JWT libraries SHOULD NOT\ngenerate JWTs using \"none\" unless explicitly requested to do so by the caller. Similarly, JWT\nlibraries consume JWTs using \"none\" unless explicitly requested by the caller. SHOULD NOT\n\nApplications follow these algorithm-specific recommendations: SHOULD"
+      }
+    }
+  },
+  {
+    "sample_id": "coh_06",
+    "document_id": "rfc8725",
+    "page": 9,
+    "anchor_char_offset": 1443,
+    "anchor_snippet": "ing application to perform key lookup. Applications\nshould ensure that this does not create SQL or LDAP injection vulner",
+    "strategy_chunks": {
+      "A": {
+        "chunk_id": "rfc8725:p09:fixed:03",
+        "char_length": 500,
+        "section": "Section 3: Best Practices",
+        "text": "ey ID) header is used by the relying application to perform key lookup. Applications\nshould ensure that this does not create SQL or LDAP injection vulnerabilities by validating and/or\nsanitizing the received value.\n\nSimilarly, blindly following a \"jku\" (JWK set URL) or \"x5u\" (X.509 URL) header, which may\ncontain an arbitrary URL, could result in server-side request forgery (SSRF) attacks. Applications\nprotect against such attacks, e.g., by matching the URL to a whitelist of allowed locations SHO"
+      },
+      "B": {
+        "chunk_id": "rfc8725:p09:para:03",
+        "char_length": 604,
+        "section": "3.10. Do Not Trust Received Claims",
+        "text": "3.10. Do Not Trust Received Claims\n\nThe \"kid\" (key ID) header is used by the relying application to perform key lookup. Applications\nshould ensure that this does not create SQL or LDAP injection vulnerabilities by validating and/or\nsanitizing the received value.\n\nSimilarly, blindly following a \"jku\" (JWK set URL) or \"x5u\" (X.509 URL) header, which may\ncontain an arbitrary URL, could result in server-side request forgery (SSRF) attacks. Applications\nprotect against such attacks, e.g., by matching the URL to a whitelist of allowed locations SHOULD\nand ensuring no cookies are sent in the GET request."
+      },
+      "C": {
+        "chunk_id": "rfc8725:p09:para:03",
+        "char_length": 604,
+        "section": "3.10. Do Not Trust Received Claims",
+        "text": "3.10. Do Not Trust Received Claims\n\nThe \"kid\" (key ID) header is used by the relying application to perform key lookup. Applications\nshould ensure that this does not create SQL or LDAP injection vulnerabilities by validating and/or\nsanitizing the received value.\n\nSimilarly, blindly following a \"jku\" (JWK set URL) or \"x5u\" (X.509 URL) header, which may\ncontain an arbitrary URL, could result in server-side request forgery (SSRF) attacks. Applications\nprotect against such attacks, e.g., by matching the URL to a whitelist of allowed locations SHOULD\nand ensuring no cookies are sent in the GET request."
+      }
+    }
+  },
+  {
+    "sample_id": "coh_07",
+    "document_id": "rfc9068",
+    "page": 4,
+    "anchor_char_offset": 1182,
+    "anchor_snippet": "ation for resource servers (see Section 4 ). JWT access tokens use MUST NOT\n\"none\" as the signing algorithm. See Section",
+    "strategy_chunks": {
+      "A": {
+        "chunk_id": "rfc9068:p04:fixed:02",
+        "char_length": 499,
+        "section": "Section 2: JWT Access Token Header and Data Structure",
+        "text": "Structure\n\n2.1. Header\n\nJWT access tokens be signed. Although JWT access tokens can use any signing algorithm, MUST\nuse of asymmetric cryptography is as it simplifies the process of acquiring RECOMMENDED\nvalidation information for resource servers (see Section 4 ). JWT access tokens use MUST NOT\n\"none\" as the signing algorithm. See Section 4 for more details.\n\nAuthorization servers and resource servers conforming to this specification include RS256 MUST\n(as defined in ) among their supported si"
+      },
+      "B": {
+        "chunk_id": "rfc9068:p04:para:02",
+        "char_length": 566,
+        "section": "2.1. Header",
+        "text": "2. JWT Access Token Header and Data Structure\n\n2.1. Header\n\nJWT access tokens be signed. Although JWT access tokens can use any signing algorithm, MUST\nuse of asymmetric cryptography is as it simplifies the process of acquiring RECOMMENDED\nvalidation information for resource servers (see Section 4 ). JWT access tokens use MUST NOT\n\"none\" as the signing algorithm. See Section 4 for more details.\n\nAuthorization servers and resource servers conforming to this specification include RS256 MUST\n(as defined in ) among their supported signature algorithms. [ RFC7518 ]"
+      },
+      "C": {
+        "chunk_id": "rfc9068:p04:para:02",
+        "char_length": 566,
+        "section": "2.1. Header",
+        "text": "2. JWT Access Token Header and Data Structure\n\n2.1. Header\n\nJWT access tokens be signed. Although JWT access tokens can use any signing algorithm, MUST\nuse of asymmetric cryptography is as it simplifies the process of acquiring RECOMMENDED\nvalidation information for resource servers (see Section 4 ). JWT access tokens use MUST NOT\n\"none\" as the signing algorithm. See Section 4 for more details.\n\nAuthorization servers and resource servers conforming to this specification include RS256 MUST\n(as defined in ) among their supported signature algorithms. [ RFC7518 ]"
+      }
+    }
+  },
+  {
+    "sample_id": "coh_08",
+    "document_id": "rfc9068",
+    "page": 5,
+    "anchor_char_offset": 1499,
+    "anchor_snippet": "the client. Their\nvalues are fixed and remain the same across all access tokens that derive from a given\nauthorization",
+    "strategy_chunks": {
+      "A": {
+        "chunk_id": "rfc9068:p05:fixed:03",
+        "char_length": 499,
+        "section": "Section 2: JWT Access Token Header and Data Structure",
+        "text": "that the\nauthentication server enforced prior to returning the authorization response to the client. Their\nvalues are fixed and remain the same across all access tokens that derive from a given\nauthorization response, whether the access token was obtained directly in the response (e.g., via\nthe implicit flow) or after one or more token exchanges (e.g., obtaining a fresh access token using\na refresh token or exchanging one access token for another via procedures). [ RFC8693 ]\n\nauth_time - as def"
+      },
+      "B": {
+        "chunk_id": "rfc9068:p05:para:04",
+        "char_length": 567,
+        "section": "2.2.1. Authentication Information Claims",
+        "text": "Their\nvalues are fixed and remain the same across all access tokens that derive from a given\nauthorization response, whether the access token was obtained directly in the response (e.g., via\nthe implicit flow) or after one or more token exchanges (e.g., obtaining a fresh access token using\na refresh token or exchanging one access token for another via procedures). [ RFC8693 ]\n\nauth_time - as defined in Section 2 of . OPTIONAL [ OpenID.Core ]\n\nacr - as defined in Section 2 of . OPTIONAL [ OpenID.Core ]\n\namr - as defined in Section 2 of . OPTIONAL [ OpenID.Core ]"
+      },
+      "C": {
+        "chunk_id": "rfc9068:p05:para:04",
+        "char_length": 567,
+        "section": "2.2.1. Authentication Information Claims",
+        "text": "Their\nvalues are fixed and remain the same across all access tokens that derive from a given\nauthorization response, whether the access token was obtained directly in the response (e.g., via\nthe implicit flow) or after one or more token exchanges (e.g., obtaining a fresh access token using\na refresh token or exchanging one access token for another via procedures). [ RFC8693 ]\n\nauth_time - as defined in Section 2 of . OPTIONAL [ OpenID.Core ]\n\nacr - as defined in Section 2 of . OPTIONAL [ OpenID.Core ]\n\namr - as defined in Section 2 of . OPTIONAL [ OpenID.Core ]"
+      }
+    }
+  },
+  {
+    "sample_id": "coh_09",
+    "document_id": "rfc9126",
+    "page": 6,
+    "anchor_char_offset": 1561,
+    "anchor_snippet": "authentication methods, apply for the PAR endpoint as well. If applicable, the\ntoken_endpoint_auth_method client metadat",
+    "strategy_chunks": {
+      "A": {
+        "chunk_id": "rfc9126:p06:fixed:03",
+        "char_length": 500,
+        "section": "Section 2: Pushed Authorization Request Endpoint",
+        "text": "n 3 of this document. [ RFC9101 ]\n\nThe rules for client authentication as defined in for token endpoint requests, including [ RFC6749 ]\nthe applicable authentication methods, apply for the PAR endpoint as well. If applicable, the\ntoken_endpoint_auth_method client metadata parameter indicates the registered [ RFC7591 ]\nauthentication method for the client to use when making direct requests to the authorization\nserver, including requests to the PAR endpoint. Similarly, the\ntoken_endpoint_auth_meth"
+      },
+      "B": {
+        "chunk_id": "rfc9126:p06:para:03",
+        "char_length": 425,
+        "section": "2. Pushed Authorization Request Endpoint",
+        "text": "The rules for client authentication as defined in for token endpoint requests, including [ RFC6749 ]\nthe applicable authentication methods, apply for the PAR endpoint as well. If applicable, the\ntoken_endpoint_auth_method client metadata parameter indicates the registered [ RFC7591 ]\nauthentication method for the client to use when making direct requests to the authorization\nserver, including requests to the PAR endpoint."
+      },
+      "C": {
+        "chunk_id": "rfc9126:p06:para:03",
+        "char_length": 425,
+        "section": "2. Pushed Authorization Request Endpoint",
+        "text": "The rules for client authentication as defined in for token endpoint requests, including [ RFC6749 ]\nthe applicable authentication methods, apply for the PAR endpoint as well. If applicable, the\ntoken_endpoint_auth_method client metadata parameter indicates the registered [ RFC7591 ]\nauthentication method for the client to use when making direct requests to the authorization\nserver, including requests to the PAR endpoint."
+      }
+    }
+  },
+  {
+    "sample_id": "coh_10",
+    "document_id": "rfc9126",
+    "page": 8,
+    "anchor_char_offset": 1294,
+    "anchor_snippet": "RFC8259 ]\n\nrequest_uri\nThe request URI corresponding to the authorization request posted. This URI is a single-use\nrefe",
+    "strategy_chunks": {
+      "A": {
+        "chunk_id": "rfc9126:p08:fixed:02",
+        "char_length": 500,
+        "section": "Section 2: Pushed Authorization Request Endpoint",
+        "text": "est is performed.\n\n2.2. Successful Response\n\nIf the verification is successful, the server generate a request URI and provide it in the MUST\nresponse with a 201 HTTP status code. The following parameters are included as top-level\nmembers in the message body of the HTTP response using the application/json media type as\ndefined by . [ RFC8259 ]\n\nrequest_uri\nThe request URI corresponding to the authorization request posted. This URI is a single-use\nreference to the respective request data in the su"
+      },
+      "B": {
+        "chunk_id": "rfc9126:p08:para:03",
+        "char_length": 447,
+        "section": "2.2. Successful Response",
+        "text": "request_uri\nThe request URI corresponding to the authorization request posted. This URI is a single-use\nreference to the respective request data in the subsequent authorization request. The way the\nauthorization process obtains the authorization request data is at the discretion of the\nauthorization server and is out of scope of this specification. There is no need to make the\nauthorization request data available to other parties via this URI."
+      },
+      "C": {
+        "chunk_id": "rfc9126:p08:para:03",
+        "char_length": 447,
+        "section": "2.2. Successful Response",
+        "text": "request_uri\nThe request URI corresponding to the authorization request posted. This URI is a single-use\nreference to the respective request data in the subsequent authorization request. The way the\nauthorization process obtains the authorization request data is at the discretion of the\nauthorization server and is out of scope of this specification. There is no need to make the\nauthorization request data available to other parties via this URI."
+      }
+    }
+  }
+]

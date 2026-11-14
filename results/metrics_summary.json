@@ -1,0 +1,193 @@
+{
+  "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "dimensions": 384,
+  "vector_store": "Qdrant Local Persistent Storage (qdrant-client 1.20.0)",
+  "distance_metric": "Cosine (exact=True)",
+  "strategy_stats": {
+    "A": {
+      "name": "Strategy A (Fixed-Size Chunking, Unfiltered)",
+      "chunking": "fixed_size",
+      "chunk_size": 500,
+      "overlap": 50,
+      "use_metadata_filter": false,
+      "chunk_count": 323,
+      "total_characters": 148440,
+      "approx_tokens": 37123,
+      "min_length": 58,
+      "median_length": 500,
+      "mean_length": 459.6,
+      "max_length": 500,
+      "ingest_time_seconds": 20.994,
+      "cost_usd": 0.0,
+      "stored_vector_count": 323
+    },
+    "B": {
+      "name": "Strategy B (Heading/Paragraph-Aware Chunking, Unfiltered)",
+      "chunking": "by_paragraph",
+      "chunk_size": 650,
+      "overlap": 0,
+      "use_metadata_filter": false,
+      "chunk_count": 286,
+      "total_characters": 134903,
+      "approx_tokens": 33728,
+      "min_length": 30,
+      "median_length": 520.5,
+      "mean_length": 471.7,
+      "max_length": 650,
+      "ingest_time_seconds": 19.163,
+      "cost_usd": 0.0,
+      "stored_vector_count": 286
+    },
+    "C": {
+      "name": "Strategy C (Heading/Paragraph-Aware Chunking + Metadata Filtering)",
+      "chunking": "by_paragraph",
+      "chunk_size": 650,
+      "overlap": 0,
+      "use_metadata_filter": true,
+      "chunk_count": 286,
+      "total_characters": 134903,
+      "approx_tokens": 33728,
+      "min_length": 30,
+      "median_length": 520.5,
+      "mean_length": 471.7,
+      "max_length": 650,
+      "ingest_time_seconds": 18.244,
+      "cost_usd": 0.0,
+      "stored_vector_count": 286
+    }
+  },
+  "reingestion_check": {
+    "strategy_tested": "B",
+    "initial_chunk_count": 286,
+    "count_after_full_reingest": 286,
+    "duplicates_created": 0,
+    "idempotent_verified": true,
+    "obsolete_cleanup_tested": true,
+    "count_during_shrunk_doc_simulation": 188
+  },
+  "retrieval_metrics": {
+    "A": {
+      "dev": {
+        "total_questions": 15,
+        "hit_at_1_count": 4,
+        "hit_at_1_fraction": "4/15",
+        "hit_at_1_rate": 0.2667,
+        "hit_at_3_count": 7,
+        "hit_at_3_fraction": "7/15",
+        "hit_at_3_rate": 0.4667,
+        "evidence_split_errors": 6,
+        "filter_questions_count": 3,
+        "filter_compliant_count": 1,
+        "filter_compliance_fraction": "1/3"
+      },
+      "all": {
+        "total_questions": 20,
+        "hit_at_1_count": 4,
+        "hit_at_1_fraction": "4/20",
+        "hit_at_1_rate": 0.2,
+        "hit_at_3_count": 7,
+        "hit_at_3_fraction": "7/20",
+        "hit_at_3_rate": 0.35,
+        "evidence_split_errors": 9,
+        "filter_questions_count": 5,
+        "filter_compliant_count": 2,
+        "filter_compliance_fraction": "2/5"
+      },
+      "test": {
+        "total_questions": 5,
+        "hit_at_1_count": 0,
+        "hit_at_1_fraction": "0/5",
+        "hit_at_1_rate": 0.0,
+        "hit_at_3_count": 0,
+        "hit_at_3_fraction": "0/5",
+        "hit_at_3_rate": 0.0,
+        "evidence_split_errors": 3,
+        "filter_questions_count": 2,
+        "filter_compliant_count": 1,
+        "filter_compliance_fraction": "1/2"
+      }
+    },
+    "B": {
+      "dev": {
+        "total_questions": 15,
+        "hit_at_1_count": 9,
+        "hit_at_1_fraction": "9/15",
+        "hit_at_1_rate": 0.6,
+        "hit_at_3_count": 13,
+        "hit_at_3_fraction": "13/15",
+        "hit_at_3_rate": 0.8667,
+        "evidence_split_errors": 0,
+        "filter_questions_count": 3,
+        "filter_compliant_count": 1,
+        "filter_compliance_fraction": "1/3"
+      },
+      "all": {
+        "total_questions": 20,
+        "hit_at_1_count": 9,
+        "hit_at_1_fraction": "9/20",
+        "hit_at_1_rate": 0.45,
+        "hit_at_3_count": 15,
+        "hit_at_3_fraction": "15/20",
+        "hit_at_3_rate": 0.75,
+        "evidence_split_errors": 1,
+        "filter_questions_count": 5,
+        "filter_compliant_count": 2,
+        "filter_compliance_fraction": "2/5"
+      },
+      "test": {
+        "total_questions": 5,
+        "hit_at_1_count": 0,
+        "hit_at_1_fraction": "0/5",
+        "hit_at_1_rate": 0.0,
+        "hit_at_3_count": 2,
+        "hit_at_3_fraction": "2/5",
+        "hit_at_3_rate": 0.4,
+        "evidence_split_errors": 1,
+        "filter_questions_count": 2,
+        "filter_compliant_count": 1,
+        "filter_compliance_fraction": "1/2"
+      }
+    },
+    "C": {
+      "dev": {
+        "total_questions": 15,
+        "hit_at_1_count": 10,
+        "hit_at_1_fraction": "10/15",
+        "hit_at_1_rate": 0.6667,
+        "hit_at_3_count": 13,
+        "hit_at_3_fraction": "13/15",
+        "hit_at_3_rate": 0.8667,
+        "evidence_split_errors": 0,
+        "filter_questions_count": 3,
+        "filter_compliant_count": 3,
+        "filter_compliance_fraction": "3/3"
+      },
+      "all": {
+        "total_questions": 20,
+        "hit_at_1_count": 10,
+        "hit_at_1_fraction": "10/20",
+        "hit_at_1_rate": 0.5,
+        "hit_at_3_count": 15,
+        "hit_at_3_fraction": "15/20",
+        "hit_at_3_rate": 0.75,
+        "evidence_split_errors": 1,
+        "filter_questions_count": 5,
+        "filter_compliant_count": 5,
+        "filter_compliance_fraction": "5/5"
+      },
+      "test": {
+        "total_questions": 5,
+        "hit_at_1_count": 0,
+        "hit_at_1_fraction": "0/5",
+        "hit_at_1_rate": 0.0,
+        "hit_at_3_count": 2,
+        "hit_at_3_fraction": "2/5",
+        "hit_at_3_rate": 0.4,
+        "evidence_split_errors": 1,
+        "filter_questions_count": 2,
+        "filter_compliant_count": 2,
+        "filter_compliance_fraction": "2/2"
+      }
+    }
+  }
+}

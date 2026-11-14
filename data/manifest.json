@@ -1,0 +1,369 @@
+{
+  "corpus_title": "IETF OAuth 2.0 & JWT Security Specifications Corpus",
+  "topic": "Technical Specifications for OAuth 2.0 Token Exchange, JWT Best Current Practices, JWT Access Tokens, and Pushed Authorization Requests",
+  "created_at": "2026-11-14T04:24:46.874125+00:00",
+  "page_counting_rule": "Count physical PDF pages containing substantive technical specification text after Unicode NFKC normalization and running header/footer removal. Exclude pages containing only Table of Contents, only Bibliographic References, or only Acknowledgements / Authors' Addresses. Strip trailing TOC lines on Page 3 prior to Section 1. Introduction.",
+  "total_documents": 4,
+  "total_physical_pages": 73,
+  "total_valid_content_pages": 59,
+  "total_normalized_characters": 135305,
+  "metadata_fields": {
+    "document_id": "str - RFC identifier (rfc8693, rfc8725, rfc9068, rfc9126)",
+    "source": "str - Relative path to source PDF in repository",
+    "page": "int - Physical page number in the PDF (1-indexed)",
+    "year": "int - Official IETF publication year (2020 or 2021), used for metadata filtering",
+    "category": "str - IETF RFC status category ('Standards Track' or 'Best Current Practice'), used for metadata filtering",
+    "section": "str - Primary numbered section heading on the page"
+  },
+  "documents": [
+    {
+      "source_id": "rfc8693",
+      "title": "RFC 8693: OAuth 2.0 Token Exchange",
+      "source_path_or_url": "https://www.rfc-editor.org/rfc/rfc8693.pdf",
+      "local_path": "data/raw/rfc8693.pdf",
+      "license_or_permission": "IETF Trust Legal Provisions (TLP 5.0 / BCP 78) - Publicly redistributable specification",
+      "accessed_at": "2026-11-14T10:56:00+07:00",
+      "snapshot_or_version": "RFC 8693 (2020, Standards Track)",
+      "year": 2020,
+      "category": "Standards Track",
+      "physical_pages": 27,
+      "valid_content_pages": 24,
+      "valid_page_ids": [
+        "rfc8693:p01",
+        "rfc8693:p03",
+        "rfc8693:p04",
+        "rfc8693:p05",
+        "rfc8693:p06",
+        "rfc8693:p07",
+        "rfc8693:p08",
+        "rfc8693:p09",
+        "rfc8693:p10",
+        "rfc8693:p11",
+        "rfc8693:p12",
+        "rfc8693:p13",
+        "rfc8693:p14",
+        "rfc8693:p15",
+        "rfc8693:p16",
+        "rfc8693:p17",
+        "rfc8693:p18",
+        "rfc8693:p19",
+        "rfc8693:p20",
+        "rfc8693:p22",
+        "rfc8693:p23",
+        "rfc8693:p24",
+        "rfc8693:p25",
+        "rfc8693:p26"
+      ],
+      "valid_page_numbers": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "excluded_pages": [
+        {
+          "page": 2,
+          "reason": "table_of_contents",
+          "char_count": 887,
+          "preview": "Table of Contents  1 . Introduction  1.1 . Delegation vs. Impersonation Semantics  1.2 . Requirements Notation and Conve"
+        },
+        {
+          "page": 21,
+          "reason": "references_only",
+          "char_count": 2486,
+          "preview": ", , , , Richer, J., Ed. \"OAuth 2.0 Token Introspection\" RFC 7662 DOI 10.17487/RFC7662 October 2015, . < https://www.rfc-"
+        },
+        {
+          "page": 27,
+          "reason": "acknowledgements_or_authors_only",
+          "char_count": 835,
+          "preview": "The following individuals contributed ideas, feedback, and wording to this specification: Caleb , , , , , , Baker Vittor"
+        }
+      ],
+      "character_count": 52345,
+      "page_character_counts": {
+        "1": 1755,
+        "3": 1007,
+        "4": 3300,
+        "5": 3384,
+        "6": 2775,
+        "7": 3047,
+        "8": 3049,
+        "9": 2889,
+        "10": 2758,
+        "11": 1996,
+        "12": 2118,
+        "13": 2907,
+        "14": 1904,
+        "15": 1408,
+        "16": 2381,
+        "17": 2160,
+        "18": 1430,
+        "19": 1440,
+        "20": 1813,
+        "22": 2331,
+        "23": 1590,
+        "24": 2017,
+        "25": 1059,
+        "26": 1827
+      }
+    },
+    {
+      "source_id": "rfc8725",
+      "title": "RFC 8725: JSON Web Token Best Current Practices",
+      "source_path_or_url": "https://www.rfc-editor.org/rfc/rfc8725.pdf",
+      "local_path": "data/raw/rfc8725.pdf",
+      "license_or_permission": "IETF Trust Legal Provisions (TLP 5.0 / BCP 78) - Publicly redistributable specification",
+      "accessed_at": "2026-11-14T10:56:00+07:00",
+      "snapshot_or_version": "RFC 8725 (2020, Best Current Practice)",
+      "year": 2020,
+      "category": "Best Current Practice",
+      "physical_pages": 13,
+      "valid_content_pages": 9,
+      "valid_page_ids": [
+        "rfc8725:p01",
+        "rfc8725:p03",
+        "rfc8725:p04",
+        "rfc8725:p05",
+        "rfc8725:p06",
+        "rfc8725:p07",
+        "rfc8725:p08",
+        "rfc8725:p09",
+        "rfc8725:p10"
+      ],
+      "valid_page_numbers": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "excluded_pages": [
+        {
+          "page": 2,
+          "reason": "table_of_contents",
+          "char_count": 1023,
+          "preview": "Table of Contents  1 . Introduction  1.1 . Target Audience  1.2 . Conventions Used in this Document  2 . Threats and Vul"
+        },
+        {
+          "page": 11,
+          "reason": "references_only",
+          "char_count": 2295,
+          "preview": "6. References  6.1. Normative References  [nist-sp-800-56a-r3] , Barker, E., Chen, L., Roginsky, A., Vassilev, A., and R"
+        },
+        {
+          "page": 12,
+          "reason": "references_only",
+          "char_count": 2645,
+          "preview": "[Alawatugoda] , Alawatugoda, J., Stebila, D., and C. Boyd \"Protecting Encrypted Cookies from , Compression Side-Channel "
+        },
+        {
+          "page": 13,
+          "reason": "acknowledgements_or_authors_only",
+          "char_count": 728,
+          "preview": "Acknowledgements  Thanks to for bringing the \"ECDH-ES\" invalid point attack to the attention of JWE Antonio Sanso and JW"
+        }
+      ],
+      "character_count": 21373,
+      "page_character_counts": {
+        "1": 1947,
+        "3": 2206,
+        "4": 2158,
+        "5": 2183,
+        "6": 2255,
+        "7": 2720,
+        "8": 2392,
+        "9": 2886,
+        "10": 2626
+      }
+    },
+    {
+      "source_id": "rfc9068",
+      "title": "RFC 9068: JSON Web Token (JWT) Profile for OAuth 2.0 Access Tokens",
+      "source_path_or_url": "https://www.rfc-editor.org/rfc/rfc9068.pdf",
+      "local_path": "data/raw/rfc9068.pdf",
+      "license_or_permission": "IETF Trust Legal Provisions (TLP 5.0 / BCP 78) - Publicly redistributable specification",
+      "accessed_at": "2026-11-14T10:56:00+07:00",
+      "snapshot_or_version": "RFC 9068 (2021, Standards Track)",
+      "year": 2021,
+      "category": "Standards Track",
+      "physical_pages": 15,
+      "valid_content_pages": 11,
+      "valid_page_ids": [
+        "rfc9068:p01",
+        "rfc9068:p03",
+        "rfc9068:p04",
+        "rfc9068:p05",
+        "rfc9068:p06",
+        "rfc9068:p07",
+        "rfc9068:p08",
+        "rfc9068:p09",
+        "rfc9068:p10",
+        "rfc9068:p11",
+        "rfc9068:p12"
+      ],
+      "valid_page_numbers": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "excluded_pages": [
+        {
+          "page": 2,
+          "reason": "table_of_contents",
+          "char_count": 779,
+          "preview": "Table of Contents  1 . Introduction  1.1 . Requirements Notation and Conventions  1.2 . Terminology  2 . JWT Access Toke"
+        },
+        {
+          "page": 13,
+          "reason": "references_only",
+          "char_count": 2353,
+          "preview": "8. References  8.1. Normative References  [OpenID.Core] , , , , and , Sakimura, N. Bradley, J. Jones, M. de Medeiros, B."
+        },
+        {
+          "page": 14,
+          "reason": "references_only",
+          "char_count": 2666,
+          "preview": "[RFC8693] , , , , and , Jones, M. Nadalin, A. Campbell, B., Ed. Bradley, J. C. Mortimore \"OAuth 2.0 , , , January 2020, "
+        },
+        {
+          "page": 15,
+          "reason": "acknowledgements_or_authors_only",
+          "char_count": 698,
+          "preview": ", , , , , , Dale Olds George Fletcher David Waite Michael Engan Mike Jones Hans Zandbelt Vladimir , , , , , Dzhuvinov Ma"
+        }
+      ],
+      "character_count": 26088,
+      "page_character_counts": {
+        "1": 1705,
+        "3": 2903,
+        "4": 2364,
+        "5": 2998,
+        "6": 2864,
+        "7": 1785,
+        "8": 2708,
+        "9": 3166,
+        "10": 2071,
+        "11": 2300,
+        "12": 1224
+      }
+    },
+    {
+      "source_id": "rfc9126",
+      "title": "RFC 9126: OAuth 2.0 Pushed Authorization Requests (PAR)",
+      "source_path_or_url": "https://www.rfc-editor.org/rfc/rfc9126.pdf",
+      "local_path": "data/raw/rfc9126.pdf",
+      "license_or_permission": "IETF Trust Legal Provisions (TLP 5.0 / BCP 78) - Publicly redistributable specification",
+      "accessed_at": "2026-11-14T10:56:00+07:00",
+      "snapshot_or_version": "RFC 9126 (2021, Standards Track)",
+      "year": 2021,
+      "category": "Standards Track",
+      "physical_pages": 18,
+      "valid_content_pages": 15,
+      "valid_page_ids": [
+        "rfc9126:p01",
+        "rfc9126:p03",
+        "rfc9126:p04",
+        "rfc9126:p05",
+        "rfc9126:p06",
+        "rfc9126:p07",
+        "rfc9126:p08",
+        "rfc9126:p09",
+        "rfc9126:p10",
+        "rfc9126:p11",
+        "rfc9126:p12",
+        "rfc9126:p13",
+        "rfc9126:p14",
+        "rfc9126:p15",
+        "rfc9126:p16"
+      ],
+      "valid_page_numbers": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "excluded_pages": [
+        {
+          "page": 2,
+          "reason": "table_of_contents",
+          "char_count": 804,
+          "preview": "Table of Contents  1 . Introduction  1.1 . Introductory Example  1.2 . Conventions and Terminology  2 . Pushed Authoriza"
+        },
+        {
+          "page": 17,
+          "reason": "references_only",
+          "char_count": 2684,
+          "preview": "[RFC9101] , , and , Sakimura, N. Bradley, J. M. Jones \"The OAuth 2.0 Authorization , , Framework: JWT-Secured Authorizat"
+        },
+        {
+          "page": 18,
+          "reason": "references_only",
+          "char_count": 1338,
+          "preview": "[RFC8705] , , , and , Campbell, B. Bradley, J. Sakimura, N. T. Lodderstedt \"OAuth 2.0 Mutual- , , TLS Client Authenticat"
+        }
+      ],
+      "character_count": 35499,
+      "page_character_counts": {
+        "1": 1869,
+        "3": 2681,
+        "4": 1955,
+        "5": 1938,
+        "6": 3123,
+        "7": 2901,
+        "8": 2589,
+        "9": 2185,
+        "10": 2422,
+        "11": 2715,
+        "12": 2517,
+        "13": 2252,
+        "14": 2294,
+        "15": 2246,
+        "16": 1812
+      }
+    }
+  ]
+}

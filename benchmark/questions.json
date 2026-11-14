@@ -1,0 +1,229 @@
+{
+  "benchmark_name": "Day 06 Data Ingestion Engineering Benchmark - IETF OAuth 2.0 & JWT Security Corpus",
+  "version": "1.0.0",
+  "frozen_before_experiment": true,
+  "split_policy": "Stratified split frozen prior to running retrieval experiments: 15 dev questions (q01-q15) and 5 test questions (q16-q20) balanced across the 4 RFC documents (rfc8693, rfc8725, rfc9068, rfc9126) and 4 question types (direct, paraphrase, conditional, metadata_filter). Includes 5 metadata_filter questions (3 in dev, 2 in test) using only pre-retrieval context metadata (year, category) without leaking gold_source_id or answers.",
+  "selection_criteria": "Primary: highest Dev Evidence Hit@3; Secondary: highest Dev Hit@1 and manual Grounding/Coherence score; Tertiary: lowest chunk count and ingestion time.",
+  "questions": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "type": "direct",
+      "question": "In OAuth 2.0 Token Exchange, what does the outermost 'act' claim represent when a chain of delegation is expressed by nesting 'act' claims?",
+      "expected_answer": "The outermost 'act' claim represents the current actor, while nested 'act' claims represent prior actors (with the least recent actor being the most deeply nested).",
+      "gold_source_id": "rfc8693",
+      "gold_page": 14,
+      "evidence_quote": "A chain of delegation can be expressed by nesting one act claim within another. The outermost\nact claim represents the current actor while nested act claims represent prior actors. The least\nrecent actor is the most deeply nested."
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "type": "conditional",
+      "question": "When is the 'actor_token_type' parameter required in a token exchange request, and when must it not be included?",
+      "expected_answer": "It is REQUIRED when the 'actor_token' parameter is present in the request, and MUST NOT be included otherwise.",
+      "gold_source_id": "rfc8693",
+      "gold_page": 8,
+      "evidence_quote": "An identifier, as described in Section 3 , that indicates the type of the security token in the\nactor_token parameter. This is when the actor_token parameter is present in REQUIRED\nthe request but be included otherwise. MUST NOT"
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "How do 'delegation' and 'impersonation' differ when resource server A calls backend service C on behalf of user B?",
+      "expected_answer": "In delegation, A uses its own credentials to access C with an annotation that A is acting on behalf of B; in impersonation, A is granted a limited access credential to C that continues to identify B as the authorized entity.",
+      "gold_source_id": "rfc8693",
+      "gold_page": 5,
+      "evidence_quote": "it may be desirable for A to use its own\ncredentials to access C along with an annotation of some form that A is acting on behalf of B\n(\"delegation\") or for A to be granted a limited access credential to C but that continues to identify\nB as the authorized entity (\"impersonation\")."
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "type": "direct",
+      "question": "What URI format constraint applies to the 'resource' parameter in an OAuth 2.0 token exchange request regarding query and fragment components?",
+      "expected_answer": "The 'resource' parameter value MUST be an absolute URI that MAY include a query component and MUST NOT include a fragment component.",
+      "gold_source_id": "rfc8693",
+      "gold_page": 7,
+      "evidence_quote": "The value of the resource parameter be an absolute URI, as specified by MUST Section 4.3\n, that include a query component and include a fragment of [ RFC3986 ] MAY MUST NOT\ncomponent."
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "type": "metadata_filter",
+      "question": "Under the 2020 Standards Track specification, what HTTP status code and media type are used by the authorization server in a successful response?",
+      "expected_answer": "An HTTP 200 status code and the 'application/json' media type.",
+      "gold_source_id": "rfc8693",
+      "gold_page": 9,
+      "evidence_quote": "If the request is valid and meets all policy and other criteria of the authorization server, a\nsuccessful token response is constructed by adding the following parameters to the entity-body of\nthe HTTP response using the \"application/json\" media type, as specified by , and an [ RFC8259 ]\nHTTP 200 status code.",
+      "filter": {
+        "year": 2020,
+        "category": "Standards Track"
+      }
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "How can an attacker exploit elliptic curve key agreement ('ECDH-ES') when a JOSE library fails to validate curve point inputs?",
+      "expected_answer": "By sending JWEs that use invalid curve points and observing the cleartext outputs resulting from decryption, the attacker can recover the recipient's private key.",
+      "gold_source_id": "rfc8725",
+      "gold_page": 5,
+      "evidence_quote": "An\nattacker that is able to send JWEs of its choosing that use invalid curve points and observe the\ncleartext outputs resulting from decryption with the invalid curve points can use this\nvulnerability to recover the recipient's private key."
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "type": "direct",
+      "question": "Why should human-memorizable passwords not be directly used as the key to a keyed-MAC algorithm like HS256 in JWTs, and what should they be used for instead?",
+      "expected_answer": "Human-memorizable passwords MUST NOT be directly used as the key to a keyed-MAC algorithm such as HS256; passwords should only be used to perform key encryption rather than content encryption.",
+      "gold_source_id": "rfc8725",
+      "gold_page": 8,
+      "evidence_quote": "human-memorizable Section 8.8 of [ RFC7518 ] MUST\npasswords be directly used as the key to a keyed-MAC algorithm such as \"HS256\". MUST NOT\nMoreover, passwords should only be used to perform key encryption, rather than content\nencryption"
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "type": "conditional",
+      "question": "When applying explicit typing to a Nested JWT, where must the 'typ' Header Parameter containing the explicit type value be present?",
+      "expected_answer": "It MUST be present in the inner JWT of the Nested JWT (whose payload is the JWT Claims Set), and in some cases may also be present in the outer JWT.",
+      "gold_source_id": "rfc8725",
+      "gold_page": 10,
+      "evidence_quote": "When applying explicit typing to a Nested JWT, the \"typ\" Header Parameter containing the\nexplicit type value be present in the inner JWT of the Nested JWT (the JWT whose payload MUST\nis the JWT Claims Set)."
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "type": "metadata_filter",
+      "question": "According to the 2020 Best Current Practice specification, under what condition can the 'none' algorithm be acceptable for a JWT?",
+      "expected_answer": "When the JWT is cryptographically protected end-to-end by another transport layer, such as TLS using cryptographically current algorithms, and only when explicitly requested by the caller.",
+      "gold_source_id": "rfc8725",
+      "gold_page": 7,
+      "evidence_quote": "That said, if a JWT is cryptographically protected end-to-end by a transport layer, such as TLS\nusing cryptographically current algorithms, there may be no need to apply another layer of\ncryptographic protections to the JWT. In such cases, the use of the \"none\" algorithm can be\nperfectly acceptable.",
+      "filter": {
+        "year": 2020,
+        "category": "Best Current Practice"
+      }
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "type": "conditional",
+      "question": "In the JWT Profile for OAuth 2.0 Access Tokens, how does the expected value of the 'sub' claim differ between grants involving a resource owner versus the client credentials grant?",
+      "expected_answer": "When a resource owner is involved (e.g., authorization code grant), 'sub' SHOULD correspond to the subject identifier of the resource owner; when no resource owner is involved (e.g., client credentials grant), 'sub' SHOULD correspond to an identifier the authorization server uses to indicate the client application.",
+      "gold_source_id": "rfc9068",
+      "gold_page": 5,
+      "evidence_quote": "In cases of access tokens obtained REQUIRED Section 4.1.2 of [ RFC7519 ]\nthrough grants where a resource owner is involved, such as the authorization code grant, the\nvalue of \"sub\" correspond to the subject identifier of the resource owner. In cases of SHOULD\naccess tokens obtained through grants where no resource owner is involved, such as the client\ncredentials grant, the value of \"sub\" correspond to an identifier the authorization SHOULD\nserver uses to indicate the client application."
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "type": "direct",
+      "question": "What error code must a resource server include in its response when any JWT access token validation check fails?",
+      "expected_answer": "The response MUST include the error code 'invalid_token' (as described in Section 3.1 of RFC 6750).",
+      "gold_source_id": "rfc9068",
+      "gold_page": 9,
+      "evidence_quote": "The resource server handle errors as described in . In particular, in MUST Section 3.1 of [ RFC6750 ]\ncase of any failure in the validation checks listed above, the authorization server response MUST\ninclude the error code \"invalid_token\"."
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "Why are OAuth 2.0 clients prohibited from inspecting the contents of a JWT access token?",
+      "expected_answer": "Because the authorization server and resource server might decide to change the token format at any time (such as switching to opaque tokens), which would break any client logic relying on reading the token's content.",
+      "gold_source_id": "rfc9068",
+      "gold_page": 10,
+      "evidence_quote": "The client inspect the content of the access token: the authorization server and the MUST NOT\nresource server might decide to change the token format at any time (for example, by switching\nfrom this profile to opaque tokens); hence, any logic in the client relying on the ability to read the\naccess token content would break without recourse."
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "type": "direct",
+      "question": "Which authorization request parameter is explicitly prohibited from being sent to the Pushed Authorization Request (PAR) endpoint?",
+      "expected_answer": "The 'request_uri' authorization request parameter MUST NOT be provided.",
+      "gold_source_id": "rfc9126",
+      "gold_page": 7,
+      "evidence_quote": "The request_uri authorization request parameter is one exception, and it\nbe provided. MUST NOT"
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "type": "conditional",
+      "question": "When a client pushes a signed Request Object JWT to the PAR endpoint and has authentication credentials established, what check must the authorization server perform on the 'client_id'?",
+      "expected_answer": "The authorization server MUST reject the request if the authenticated 'client_id' does not match the 'client_id' claim in the Request Object.",
+      "gold_source_id": "rfc9126",
+      "gold_page": 12,
+      "evidence_quote": "If the client has authentication credentials established with the authorization server, reject 3.\nthe request if the authenticated client_id does not match the client_id claim in the\nRequest Object."
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "type": "metadata_filter",
+      "question": "Under the 2021 Standards Track specification for Pushed Authorization Requests, what HTTP status code and top-level JSON parameters are returned in a successful verification response?",
+      "expected_answer": "A 201 HTTP status code with top-level JSON parameters 'request_uri' and 'expires_in' using the application/json media type.",
+      "gold_source_id": "rfc9126",
+      "gold_page": 8,
+      "evidence_quote": "If the verification is successful, the server generate a request URI and provide it in the MUST\nresponse with a 201 HTTP status code. The following parameters are included as top-level\nmembers in the message body of the HTTP response using the application/json media type",
+      "filter": {
+        "year": 2021,
+        "category": "Standards Track"
+      }
+    },
+    {
+      "id": "q16",
+      "split": "test",
+      "type": "paraphrase",
+      "question": "What is the purpose of the 'may_act' claim in a JWT subject token during an OAuth 2.0 token exchange request?",
+      "expected_answer": "The 'may_act' claim states that one party is authorized to become the actor and act on behalf of another party, allowing the authorization server to determine whether the client or actor_token party is eligible for the requested delegation or impersonation.",
+      "gold_source_id": "rfc8693",
+      "gold_page": 16,
+      "evidence_quote": "The may_act claim makes a statement that one party is authorized to become the actor and act\non behalf of another party. The claim might be used, for example, when a subject_token is\npresented to the token endpoint in a token exchange request and may_act claim in the subject\ntoken can be used by the authorization server to determine whether the client (or party\nidentified in the actor_token ) is authorized to engage in the requested delegation or\nimpersonation."
+    },
+    {
+      "id": "q17",
+      "split": "test",
+      "type": "metadata_filter",
+      "question": "According to the 2020 Best Current Practice specification, how can blindly following a 'jku' or 'x5u' header parameter in a JWT be exploited, and how should applications defend against it?",
+      "expected_answer": "It can result in server-side request forgery (SSRF) attacks; applications SHOULD protect against this by matching the URL against a whitelist of allowed locations and ensuring no cookies are sent in the GET request.",
+      "gold_source_id": "rfc8725",
+      "gold_page": 9,
+      "evidence_quote": "Similarly, blindly following a \"jku\" (JWK set URL) or \"x5u\" (X.509 URL) header, which may\ncontain an arbitrary URL, could result in server-side request forgery (SSRF) attacks. Applications\nprotect against such attacks, e.g., by matching the URL to a whitelist of allowed locations SHOULD\nand ensuring no cookies are sent in the GET request.",
+      "filter": {
+        "year": 2020,
+        "category": "Best Current Practice"
+      }
+    },
+    {
+      "id": "q18",
+      "split": "test",
+      "type": "metadata_filter",
+      "question": "Under the 2021 Standards Track specification, what signing algorithm policy applies to the 'none' algorithm and what media type is used in the 'typ' header parameter for JWT access tokens?",
+      "expected_answer": "JWT access tokens MUST be signed (with RS256 required to be supported), MUST NOT use 'none' as the signing algorithm, and MUST include the 'application/at+jwt' media type (recommended as 'at+jwt') in the 'typ' header parameter.",
+      "gold_source_id": "rfc9068",
+      "gold_page": 4,
+      "evidence_quote": "JWT access tokens use MUST NOT\n\"none\" as the signing algorithm. See Section 4 for more details.\n\nAuthorization servers and resource servers conforming to this specification include RS256 MUST\n(as defined in ) among their supported signature algorithms. [ RFC7518 ]\n\nThis specification registers the \"application/at+jwt\" media type, which can be used to indicate that\nthe content is a JWT access token.",
+      "filter": {
+        "year": 2021,
+        "category": "Standards Track"
+      }
+    },
+    {
+      "id": "q19",
+      "split": "test",
+      "type": "direct",
+      "question": "How many times may a client use a 'request_uri' value returned by the PAR endpoint, and why?",
+      "expected_answer": "The client MUST only use a 'request_uri' value once because parts of the authorization request content (such as the 'code_challenge' parameter value) are unique to a particular authorization request.",
+      "gold_source_id": "rfc9126",
+      "gold_page": 13,
+      "evidence_quote": "Since parts of the authorization request content, e.g., the code_challenge parameter value, are\nunique to a particular authorization request, the client only use a request_uri value once. MUST"
+    },
+    {
+      "id": "q20",
+      "split": "test",
+      "type": "conditional",
+      "question": "In Pushed Authorization Requests (PAR), what is the default value of the 'require_pushed_authorization_requests' metadata parameter if omitted, and does a client need 'request_uri_parameter_supported' to use a PAR request_uri?",
+      "expected_answer": "If omitted, the default value of 'require_pushed_authorization_requests' is false; a 'request_uri' obtained from the PAR endpoint is usable at the authorization endpoint regardless of other metadata such as 'request_uri_parameter_supported' or 'require_request_uri_registration'.",
+      "gold_source_id": "rfc9126",
+      "gold_page": 14,
+      "evidence_quote": "require_pushed_authorization_requests\nBoolean parameter indicating whether the authorization server accepts authorization request\ndata only via PAR. If omitted, the default value is false .\n\nNote that the presence of pushed_authorization_request_endpoint is sufficient for a client to\ndetermine that it may use the PAR flow. A request_uri value obtained from the PAR endpoint is\nusable at the authorization endpoint regardless of other authorization server metadata such as\nrequest_uri_parameter_supported or require_request_uri_registration"
+    }
+  ]
+}
